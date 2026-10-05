@@ -1,22 +1,17 @@
-## cog-meshoptimizer
+# service-cog-vsk-mesh-optimizer
 
-`cog-meshoptimizer` is a tool to optimize 3D assets for efficient rendering and transmission. It uses various algorithms to reduce the size and complexity of 3D models while preserving visual quality.
+A container predictor that simplifies a binary glTF model with meshoptimizer's packer and returns the smaller file.
 
-### Features
+## What it is for
 
-- Mesh simplification
-- Vertex cache optimization
-- Overdraw optimization
-- Vertex quantization
+It takes a `.glb`, simplifies and quantizes it, and returns the result, so models arrive with fewer triangles and smaller buffers. The scale and error targets are inputs of the predictor.
 
-### Usage
+## Build and run
 
-To optimize a 3D model, use the `cog predict` command with the appropriate input file:
-
-```bash
-cog predict -i model_file=@slavic_girl_brown_hair.glb
+```sh
+cog predict -i model_file=@model.glb
 ```
 
-### Troubleshooting
+## Licence
 
-If you cannot `cog push` in Docker Desktop, try disabling containerd.
+MIT; see `LICENSE`.
